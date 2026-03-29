@@ -1,4 +1,5 @@
 import random
+from cell import cell
 
 #DFS maze generator
 def dfs_generator(grid):
@@ -27,9 +28,9 @@ def gen_binarytree(grid):
             if options:
                 option = random.choice(options)
                 if option == 'left':
-                    remove_wall(cell, grid[cell.row][cell.col-1])
+                    remove_walls(cell, grid[cell.row][cell.col-1])
                 else:
-                    rmeove_wall(cell, grid[cell.row-1][cell.col])
+                    rmeove_walls(cell, grid[cell.row-1][cell.col])
 
 #Wilson algorithm generator           
 def gen_wilsons(grid):

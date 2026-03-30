@@ -9,3 +9,6 @@ class Cell:
             'bottom': True,
             'left': True
         }
+
+    def __str__(self):
+        return f"Row: {self.row} Col: {self.col}"
